@@ -23,7 +23,7 @@ export function FeedbackForm() {
       email: '',
       message: ''
     },
-    onSubmit: (values) => {
+    onSubmit: (values, { resetForm }) => {
       dispatch(
         sendFeedback({
           name: values.name,
@@ -31,6 +31,7 @@ export function FeedbackForm() {
           message: values.message
         })
       );
+      resetForm();
     },
     validationSchema: Yup.object().shape({
       email: Yup.string()
