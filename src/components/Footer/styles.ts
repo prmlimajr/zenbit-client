@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import FooterBackground from '../../assets/footer.svg';
 
 export const Container = styled.section`
-  height: 200px;
+  height: 100px;
   width: 100%;
   background: url(${FooterBackground}) no-repeat center center/cover;
   position: fixed;
@@ -13,6 +13,7 @@ export const Container = styled.section`
 
   @media (min-width: 768px) {
     justify-content: flex-start;
+    height: 200px;
   }
 `;
 
